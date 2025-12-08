@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Videó</title>
+</head>
+<body>
+    <header>
+        <h1>Videó Lejátszása_AEM6TI</h1>
+    </header>
+    <section>
+    <video src="AEM6TI_VIDEO.mp4" id="video" width="600" controls>
+    </video>
+    <div class=grid>
+        <button id="start"><img>></button>
+        <button id="stop"> Leállítás</button>
+    </div>
+    <div>
+        <button id="startstop">Indítás / leállítás</button>
+    </div>
+    <br>
+    <div>
+        <button id="mute">Néma</button>
+        <button id="quite">Halk</button>
+        <button id="loud">Hangos</button>
+    </div>
+    <div>
+        <button id="vslow">nagyon lassú</button>
+        <button id="slow">lassú</button>
+        <button id="normal">normál</button>
+        <button id="fast">gyorsabb</button>
+        <button id="vfast">nagyon gyors</button>
+    </div>
+    <br>
+    <div>
+        <button id="small">kicsi</button>
+        <button id="normalsize">normál</button>
+        <button id="big">nagy</button>
+    </div>
+    <div>
+        <button id="end">bejefezősött-e</button>
+        <button id="mp">videó hossza (mp)</button>
+        <button id="pos">jelenlegi pozíció</button>   
+    </div>
+    </section>
+    <footer>
+        Forrás: <a href="https://www.w3schools.com/html/html5_video.asp">https://www.w3schools.com/html/html5_video.asp</a>
+    </footer>
+
+    <script>
+        let btnClick = (id,onclick) => document.getElementById(id).addEventListener("click", onclick);
+
+        const video = document.querySelector("video");
+
+        btnClick("start",   () => video.play());
+        btnClick("stop",   () => video.pause());
+        btnClick("startstop",   () => video.paused ? video.play() : video.pause());
+        btnClick("mute",   () => video.volume = 0);
+        btnClick("quite",   () => video.volume = 0.5);
+        btnClick("loud",   () => video.volume = 1);
+        btnClick("vslow",   () => video.playbackRate = 0.5);
+        btnClick("slow",   () => video.playbackRate = 0.75);
+        btnClick("normal",   () => video.playbackRate = 1);
+        btnClick("fast",   () => video.playbackRate = 1.25);
+        btnClick("vfast",   () => video.playbackRate = 1.5);
+        btnClick("small",   () => video.width = 400);
+        btnClick("normalsize",   () => video.width = 600);
+        btnClick("big",   () => video.width = 800);
+        btnClick("end",   () => alert(video.ended));
+        btnClick("mp",   () => alert(video.duration));
+        btnClick("pos",   () => alert(video.currentTime));
+    </script>
+</body>
+</html>
