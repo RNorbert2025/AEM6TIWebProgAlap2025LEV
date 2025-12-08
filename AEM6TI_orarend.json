@@ -1,0 +1,18 @@
+{
+"AEM6TI_orarend": {
+    "ora": [
+        {
+            "targy": "Szofteverteszteles",
+            "idopon": {
+                "nap": "hétfő",
+                "tol": 10,
+                "ig": 12
+            },
+            "helyszín": "Inf. 103",
+            "oktato": "Dr. Bednarik László",
+            "szak": "g3biw"
+        },
+
+    ]
+}
+}
